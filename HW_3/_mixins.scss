@@ -1,0 +1,31 @@
+@mixin flex-end {
+    display: flex;
+    gap: 44px;
+    align-items: flex-end;
+}
+
+@mixin justify-center-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin product_card {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: $discriptionText;
+}
+
+@mixin adress_form {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: $headerFooterColor;
+    background: #FFFFFF;
+    border: 1px solid rgba(164, 164, 164, 1);
+    width: 360px;
+    height: 45px;
+}

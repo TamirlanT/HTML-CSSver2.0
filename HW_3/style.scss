@@ -1,0 +1,425 @@
+@import 'vars';
+@import 'mixins';
+
+.body {
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: $contentCenter;
+    padding-right: $contentCenter ;
+}
+
+.header {
+    background: #222;
+    @include justify-center-space-between;
+    padding-top: 28px;
+    padding-bottom: 20px;
+
+
+    &_logo {
+        @include flex-end;
+    }
+
+
+
+    &_menu {
+        @include flex-end;
+        transition-duration: 4s;
+
+
+
+        &_icon:hover path {
+            fill: white;
+        }
+
+        &_icon:hover .header_bkgrnd {
+            fill: $mainColorText;
+        }
+    }
+}
+
+.breadcrumb {
+    background: #F8F3F4;
+
+    &_text {
+        color: $mainColorText;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.content {
+    padding-top: 96px;
+    display: grid;
+    grid-template-columns: 605px 350px;
+    gap: 128px;
+    align-items: start;
+    padding-bottom: 128px;
+
+    &_product {
+        box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+        width: 605px;
+        margin-bottom: 40px;
+    }
+
+    &_products {
+        display: flex;
+        gap: 31px;
+        position: relative;
+
+
+        &_button {
+            height: 22px;
+            position: absolute;
+            top: 28px;
+            right: 22px;
+            border: none;
+        }
+
+        &_info {
+
+            &_title {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                color: $headerFooterColor;
+                padding-top: 22px;
+                padding-right: 97px;
+            }
+
+            &_price {
+                padding-top: 42px;
+                @include product_card;
+
+                &_tag {
+                    color: $mainColorText;
+                }
+
+
+            }
+
+            &_color {
+                padding-top: 6px;
+                @include product_card;
+            }
+
+            &_size {
+                @include product_card;
+                padding-top: 6px;
+
+            }
+
+            &_quantity {
+                @include product_card;
+                padding-top: 6px;
+                padding-bottom: 62px;
+            }
+
+
+        }
+
+
+    }
+
+
+
+    &_buttons {
+        padding-top: 72px;
+        width: 605px;
+        display: flex;
+        justify-content: space-between;
+
+
+
+
+        &_info {
+            align-items: center;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            width: 225px;
+            height: 50px;
+            border: 1px solid rgba(164, 164, 164, 1);
+            background: #FFFFFF;
+            transition: all 1s;
+
+        }
+
+        &_info:hover {
+            background-color: $mainColorText;
+            color: #E2E2E2;
+        }
+    }
+
+    &_form {
+        width: 360px;
+        min-height: 272px;
+        position: relative;
+
+        &_box {
+            border: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            flex-direction: column;
+            align-content: flex-start;
+
+        }
+
+        input::placeholder {
+            color: $headerFooterColor;
+        }
+
+        &_title {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: $headerFooterColor;
+            padding-bottom: 20px;
+        }
+
+        &_city {
+            @include adress_form;
+
+        }
+
+        &_state {
+            @include adress_form;
+        }
+
+        &_postcode {
+            @include adress_form;
+        }
+
+        &_button {
+            width: 102px;
+            height: 35px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border: 1px solid #A4A4A4;
+            transition-duration: 1s;
+        }
+
+        &_button:hover {
+            background-color: $mainColorText;
+            color: white;
+        }
+    }
+
+    &_total {
+        width: 360px;
+        background: #F5F3F3;
+        margin-top: 57px;
+
+        &_price {
+            color: $mainColorText;
+        }
+
+        &_sub {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
+            padding-top: 39px;
+            padding-bottom: 12px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 34px;
+        }
+
+        &_grand {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: $headerFooterColor;
+            height: 40px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 37px;
+            border-bottom: 1px solid #E2E2E2;
+
+        }
+
+        &_checkout {
+            background: $mainColorText;
+            width: 273px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 16px;
+            margin-left: 44px;
+            margin-bottom: 42px;
+            transition: all 2s;
+
+            &_text {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+            }
+        }
+
+        &_checkout:hover {
+            border: 1px solid #060404;
+        }
+    }
+}
+
+.subscribe_block {
+    background-image: url(img/background_img.svg);
+    background-size: 100%;
+    display: grid;
+    grid-template-columns: 360px 557px;
+    gap: 222px;
+    padding-bottom: 126px;
+    padding-top: 97px;
+
+
+
+    &_left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+
+        &_comment {
+            padding-top: 30px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: $headerFooterColor;
+        }
+    }
+
+    &_right {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    &_discription {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 29px;
+        text-align: center;
+        color: $headerFooterColor;
+
+        &_text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+
+
+    &_forma {
+        padding-top: 27px;
+        display: flex;
+    }
+
+    &_e-mail {
+        width: 256px;
+        height: 49px;
+        background: #E1E1E1;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 22px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &_button {
+        background: $mainColorText;
+        width: 100px;
+        height: 49px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+        border-width: .1px;
+        transition: all 2s;
+
+    }
+
+    &_button:hover {
+        background: white;
+        color: $mainColorText;
+    }
+
+
+}
+
+.footer {
+    background: $headerFooterColor;
+
+    @include justify-center-space-between;
+
+    &_rights {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FBFBFB;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+
+    &_social_link:hover path {
+        fill: white;
+    }
+
+    &_social_link:hover .footer_bkgrnd {
+        fill: $mainColorText;
+    }
+}
