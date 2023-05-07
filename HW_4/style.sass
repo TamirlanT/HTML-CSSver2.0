@@ -1,0 +1,248 @@
+@import 'vars'
+@import 'mixins'
+*
+    padding: 0
+    margin: 0
+
+.a
+    text-decoration: none
+
+html
+    scroll-behavior: smooth
+
+.body
+    font-family: 'Lato', sans-serif
+
+.center
+    padding-left: $contentCenter
+    padding-right: $contentCenter
+
+.header
+    @include justify-center-space-between
+    padding-bottom: 20px
+    padding-top: 20px
+
+    &__logo
+        display: flex
+        gap: 41px
+        align-items: center
+
+    &__menu
+        display: flex
+        gap: 25px
+        align-items: center
+        transition-duration: .4s
+
+    &__logos:hover path
+        fill: white
+    &__logos:hover .header__bkgrnd
+        fill: $mainText
+
+.breadcrumbs
+    padding-top: 60px
+    padding-bottom: 60px
+    background: #F8F3F4
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 29px
+        color: $mainText
+
+.registration
+    padding-top: 64px
+    padding-bottom: 96px
+    background: #E5E5E5
+    display: flex
+
+    &__form
+        display: flex
+        gap: 20px
+        border: none
+        flex-direction: column
+        width: 360px
+
+        ::placeholder
+            font-style: normal
+            font-weight: 300
+            font-size: 13px
+            line-height: 16px
+            color: $inputPrompt
+            background: #fff
+
+    &__header
+        font-style: normal
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: $textColor
+
+    &__input
+        height: 45px
+        box-sizing: border-box
+        padding-left: 17px
+
+    &__gender
+        padding-top: 32px
+        padding-bottom: 32px
+
+    &__choice
+        font-style: normal
+        font-weight: 300
+        font-size: 11px
+        line-height: 13px
+        color: $blackZero
+
+    &__prompt
+        width: 360px
+        padding-top: 15px
+        font-style: normal
+        font-weight: 300
+        font-size: 13px
+        line-height: 16px
+        color: $inputPrompt
+        padding-bottom: 39px
+
+    &__button
+        background: $mainText
+        width: 167px
+        height: 50px
+        border: none
+        transition-duration: .5s
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+
+    &__button:hover
+        background-color: #E1E1E1
+        color: $mainText
+        border: 1px solid $mainText
+
+    &__button:hover path
+        fill: $mainText
+        transition-duration: .5s
+
+    &__info
+        width: 652px
+        height: 334px
+        padding-left: 128px
+
+    &__text
+        font-style: normal
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+        color: $blackZero
+        padding-bottom: 22px
+
+.subscribe
+    background-image: url(img/background_img.svg)
+    background-size: 100%
+    padding-bottom: 126px
+    padding-top: 97px
+    display: flex
+    align-items: center
+
+    &__left
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        text-align: center
+        width: 360px
+        gap: 30px
+
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        color: $textColor
+
+    &__right
+        padding-left: 223px
+        width: 557px
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        gap: 27px
+        align-content: center
+
+    &__discription
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 29px
+        text-align: center
+        color: $textColor
+
+    &__title
+        font-size: 24px
+        font-weight: 700
+
+    &__forma
+        display: flex
+
+    &__e-mail
+        width: 222px
+        height: 49px
+        background: #E1E1E1
+        border-top-left-radius: 20px
+        border-bottom-left-radius: 20px
+        border: 0
+        display: flex
+        justify-content: flex-start
+        padding-left: 22px
+        ::placeholder
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 17px
+            display: flex
+            align-items: center
+            color: $textColor
+            opacity: 0.67
+
+    &__button
+        background: $mainText
+        width: 100px
+        height: 49px
+        border-bottom-right-radius: 20px
+        border-top-right-radius: 20px
+        border: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+        border-width: .1px
+        transition: all .5s
+
+    &__button:hover
+        background-color: #E1E1E1
+        color: $mainText
+        border: 1px solid $mainText
+
+.footer
+    @include justify-center-space-between
+
+    &__rights
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        color: #FBFBFB
+        padding-top: 30px
+        padding-bottom: 30px
+
+    &__link:hover path
+        fill: white
+
+    &__link:hover .footer__bkgrnd
+        fill: $mainText
