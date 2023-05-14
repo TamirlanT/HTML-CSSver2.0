@@ -9,7 +9,7 @@ a {
     text-decoration: none;
 }
 
-.body {
+body {
     font-family: 'Lato', sans-serif;
 }
 
@@ -94,6 +94,8 @@ a {
 
 .product_discription {
     background: #ffffff;
+    border-bottom: 1px solid #EAEAEA;
+
 }
 
 .discription_subtitle {
@@ -185,6 +187,10 @@ a {
     padding-top: 48px;
     padding-bottom: 64px;
 
+}
+
+.products {
+    padding-top: 64px;
 }
 
 .products_item {
@@ -282,7 +288,7 @@ a {
 
 .subscribe_block {
     background-image: url(img/background_img.svg);
-    background-size: 100%;
+    background-size: cover;
     display: grid;
     grid-template-columns: 359px 557px;
     gap: 222px;
@@ -419,259 +425,81 @@ a {
     fill: white;
 }
 
-// @media (max-width: 1024px) {
-//     .header_logo {
-//         padding-left: 32px;
-//     }
+@media (max-width: 1024px) and (min-width: 768px) {
+    .center {
+        $width: 736px;
+        padding-left: calc(50% - $width / 2);
+        padding-right: calc(50% - $width / 2);
+    }
 
-//     .button_copy {
-//         padding-right: 41px;
-//     }
+    .products_item {
+        display: grid;
+        grid-template-columns: repeat(2, 360px);
+        padding-bottom: 129px;
+    }
 
-//     .top_content_img {
-//         height: 368px;
-//         width: 386px;
-//     }
+    .product:last-child {
+        display: none;
+    }
 
-//     .rectangle {
-//         height: 92px;
-//         padding-left: 39px;
-//         padding-right: 16px;
-//     }
+    .subscribe_block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+    }
 
-//     .brand_title {
-//         padding-right: 33px;
-//         font-size: 24px;
-//         line-height: 53px;
-//     }
+}
 
-//     .tittle_text {
-//         font-size: 44px;
-//         line-height: 53px;
-//     }
+@media (max-width: 767px) and (min-width: 375px) {
+    .center {
+        $width: 360px;
+        padding-left: calc(50% - $width / 2);
+        padding-right: calc(50% - $width / 2);
+    }
 
-//     .block_offer {
-//         padding-left: 16px;
-//         padding-right: 16px;
-//         gap: 12px;
-//         display: grid;
-//         grid-template-columns: repeat(3, 232px);
+    .button_copy_1 {
+        display: none;
+    }
 
-//     }
+    .top_header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
 
-//     .text {
-//         font-size: 15px;
-//         line-height: 19px;
-//     }
+    .top_heading_img {
+        width: 374px;
+        height: 454px;
+    }
 
-//     .big_text {
-//         font-size: 19px;
-//         line-height: 28px;
-//     }
+    .products_item {
+        display: grid;
+        grid-template-columns: repeat(1, 360px);
+        padding-bottom: 64px;
+    }
 
-//     .offer_img {
-//         width: 232px;
+    .product:nth-child(2) {
+        display: none;
+    }
 
-//     }
+    .subscribe_block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
 
-//     .accesories {
-//         width: 720px;
-//     }
+    }
 
-//     .accesories_img {
-//         width: 720px;
-//     }
+    .comment {
+        min-width: 345px;
+    }
 
-//     .products_item {
-//         display: grid;
-//         grid-template-columns: 360px 360px;
-//         gap: 14px;
-//         max-width: 768px;
-//         padding-left: 16px;
-//         padding-right: 16px;
-//     }
+    .footer {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 44px;
+        justify-content: center;
+        align-items: center;
+    }
 
-//     .information_block {
-//         grid-template-columns: repeat(1, 360px);
-//     }
-
-//     .subscribe_block {
-//         grid-template-columns: 359px;
-//         background-size: cover;
-//     }
-
-//     .footer {
-//         grid-template-columns: 352px 147px;
-//         gap: 200px;
-//         padding-left: 32px;
-//         padding-right: 32px;
-//         justify-content: space-between;
-//     }
-// }
-
-// @media (max-width: 767px) {
-//     .button_copy_1 {
-//         display: none;
-//     }
-
-//     .button_copy_2 {
-//         display: none;
-//     }
-
-//     .header_logo {
-//         padding-left: 16px;
-//         gap: 40px;
-//     }
-
-//     .button_copy {
-//         padding-right: 16px;
-//     }
-
-//     .top_content {
-//         height: 363px;
-//     }
-
-//     .top_content_img {
-//         display: none;
-//     }
-
-//     .block_offer {
-//         padding-left: 16px;
-//         padding-right: 16px;
-//         gap: 12px;
-//         display: grid;
-//         grid-template-columns: repeat(1, 343px);
-//         justify-content: center;
-//         margin: 0;
-//     }
-
-//     .offer_img {
-//         width: 343px;
-//         height: 247px;
-//     }
-
-//     .accesories {
-//         width: 343px;
-//     }
-
-//     .accesories_img {
-//         width: 343px;
-//         height: 111px;
-//     }
-
-//     .products {
-//         margin: 0;
-//     }
-
-//     .products_item {
-//         display: grid;
-//         grid-template-columns: 359px;
-//         gap: 14px;
-//         padding-left: 8px;
-//         padding-right: 8px;
-//     }
-
-//     .product_img {
-//         width: 359px;
-//     }
-
-//     .tittle_text {
-//         font-size: 38px;
-//         line-height: 46px;
-
-//         color: $backGroundColor;
-//     }
-
-//     .brand_title {
-//         font-size: 20px;
-//     }
-
-//     .big_text {
-//         font-size: 24px;
-//         line-height: 28px;
-
-//     }
-
-//     .text {
-//         font-size: 16px;
-//         line-height: 19px;
-//     }
-
-//     .subscribe_block {
-//         padding-left: 16px;
-//         padding-right: 16px;
-//         grid-template-columns: 343px;
-//     }
-
-//     .discription_form {
-//         width: 343px;
-//     }
-
-//     .footer {
-//         display: flex;
-//         flex-direction: column-reverse;
-//         align-content: center;
-//         flex-wrap: wrap;
-//         align-items: center;
-//         gap: 40px;
-//         padding-right: 16px;
-//         padding-left: 16px;
-//     }
-
-// }
-
-// @media(width: 320px) {
-//     .brand_title {
-//         font-size: 17px;
-//     }
-
-//     .tittle_text {
-//         font-size: 30px;
-//     }
-
-//     .block_offer {
-//         padding-left: 8px;
-//         padding-right: 8px;
-//         gap: 12px;
-//         display: grid;
-//         grid-template-columns: 304px;
-//         justify-content: center;
-//         margin: 0;
-//     }
-
-//     .offer_img {
-//         width: 304px;
-//     }
-
-//     .accesories {
-//         width: 304px;
-//     }
-
-//     .accesories_img {
-//         width: 304px;
-//     }
-
-//     .text {
-//         font-size: 14px;
-//     }
-
-//     .products_item {
-//         grid-template-columns: 304px;
-//     }
-
-//     .product_img {
-//         width: 304px;
-//     }
-
-//     .information_block {
-//         grid-template-columns: repeat(1, 310px);
-//     }
-
-//     .subscribe_block {
-//         grid-template-columns: 310px;
-//     }
-
-//     .discription_form {
-//         width: 300px;
-//     }
-// }
+}

@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #222;
 }
 
 @mixin product_card {
@@ -23,9 +24,10 @@
     font-weight: 300;
     font-size: 13px;
     line-height: 16px;
-    color: $headerFooterColor;
+    color: $textColor;
     background: #FFFFFF;
     border: 1px solid rgba(164, 164, 164, 1);
     width: 360px;
     height: 45px;
+    padding-left: 17px;
 }
